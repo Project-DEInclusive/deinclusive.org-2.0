@@ -1,7 +1,12 @@
 /*    Imports    */
+
 import mongoose from "mongoose";
 import CBlog from "../../classes/blog/CBlog";
+
 // schema implimentation for event
+
+
+
 const Schema = new mongoose.Schema<CBlog>(
     {
         name: { type: String, required: true, default: "" },
@@ -36,5 +41,8 @@ const Schema = new mongoose.Schema<CBlog>(
     },
     { timestamps: true }
 );
+
+
+
 
 export default mongoose.models.Blogs || mongoose.model<CBlog>("Blogs", Schema);
