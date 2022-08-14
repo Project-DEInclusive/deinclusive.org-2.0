@@ -1,6 +1,13 @@
 /*    Imports    */
+
+
 import mongoose from "mongoose";
+
 import CContact from "../../classes/contact/CContact";
+
+
+
+
 // schema implimentation for recruit request
 const Schema = new mongoose.Schema<CContact>(
     {
@@ -19,5 +26,11 @@ const Schema = new mongoose.Schema<CContact>(
     },
     { timestamps: true }
 );
+
+
+
+
+
+
 
 export default mongoose.models.Contact || mongoose.model<CContact>("Contact", Schema);
