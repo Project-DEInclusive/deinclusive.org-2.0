@@ -58,11 +58,16 @@ const Index = () => {
                             <select
                                 id="current-tab"
                                 name="current-tab"
+                                onChange={(e) => {
+                                    router.push("?tab=" + e.target.value);
+                                }}
                                 className="block w-full rounded-md border-gray-300 py-2 pl-3 pr-10 text-base focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
                                 defaultValue={page?.children.find((tab, index) => index === selTab)?.name}
                             >
-                                {page?.children.map((tab) => (
-                                    <option key={tab.name}>{tab.name}</option>
+                                {page?.children.map((tab, index) => (
+                                    <option key={tab.name} value={index}>
+                                        {tab.name}
+                                    </option>
                                 ))}
                             </select>
                         </div>
