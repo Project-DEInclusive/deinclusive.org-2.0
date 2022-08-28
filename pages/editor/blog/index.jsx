@@ -4,12 +4,16 @@ import { useEffect, useState } from "react";
 import { getPage } from "../../../constants/hooks/getMenu";
 import Head from "next/head";
 
+
+
 import Overview from "./overview";
 import All from "./all";
 import dynamic from "next/dynamic";
 const Add = dynamic(() => import("./add"));
 const Modal = dynamic(() => import("../../../components/_common/modal"));
 const SidePanel = dynamic(() => import("../../../components/_common/sidepanel"));
+
+
 
 import fetcher from "../../../constants/fetch/blog";
 
@@ -39,6 +43,8 @@ const Index = () => {
             alert("Failed To Add blog.");
         }
     };
+
+
 
     return (
         <main className="flex-1">
@@ -106,6 +112,10 @@ const Index = () => {
     );
 };
 
+
+
 export default Index;
+
+
 
 Index.layout = "admin";
