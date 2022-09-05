@@ -159,6 +159,9 @@ const Index = ({ _collections }) => {
 
     return (
         <>
+
+
+        
             <Head>
                 <title>Blogs - DEInclusive</title>
             </Head>
@@ -266,5 +269,10 @@ Index.getInitialProps = async (ctx) => {
 };
 
 Index.layout = "main";
+
+
+
+
+
 
 export default Index;
