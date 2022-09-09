@@ -3,10 +3,15 @@ import Head from "next/head";
 const Contact = () => {
     return (
         <>
+
+
+
             <Head>
                 <title>Courses</title>
             </Head>
             <div>
+
+
                 <div className="container my-12 mx-auto px-4 md:px-12">
                     <div className="flex flex-wrap -mx-1 lg:-mx-4">
                         <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
@@ -20,6 +25,9 @@ const Contact = () => {
                                         <a className="no-underline hover:underline font-bold text-black" href="#">
                                             Introduction to ML
                                         </a>
+
+
+                                        
                                     </h1>
                                     <p className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">3 Months</p>
                                 </header>
@@ -35,6 +43,9 @@ const Contact = () => {
                                     <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#AI</span>
                                     <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Software</span>
                                 </div>
+
+
+
 
                                 <footer className="flex items-center justify-between leading-none p-2 md:p-4">
                                     <a className="flex items-center no-underline hover:underline text-black" href="#">
