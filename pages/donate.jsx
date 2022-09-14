@@ -64,6 +64,10 @@ const donate = () => {
                         <div className="mx-auto max-w-3xl text-center text-2xl font-medium leading-9 text-gray-900">
                             <p>&ldquo;Help us out by donating, and be a part of the great community service we are providing.&rdquo;</p>
                         </div>
+
+
+
+
                         <footer className="mt-8">
                             <div className="md:flex md:items-center md:justify-center">
                                 <div className="mt-3 text-center md:mt-0 md:ml-4 md:flex md:items-center">
@@ -76,6 +80,8 @@ const donate = () => {
                                         >
                                             Donate now!
                                         </a>
+
+
                                     </div>
                                 </div>
                             </div>
@@ -86,6 +92,16 @@ const donate = () => {
         </section>
     );
 };
+
+
+
+
+
+
+
+
+
+
 
 export default donate;
 donate.layout = "main";
