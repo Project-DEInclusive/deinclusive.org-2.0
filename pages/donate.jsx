@@ -55,10 +55,18 @@ const donate = () => {
                             <rect x={0} y={0} width={4} height={4} className="text-gray-200" fill="currentColor" />
                         </pattern>
                     </defs>
+
+
+
                     <rect width={404} height={404} fill="url(#ad119f34-7694-4c31-947f-5c9d249b21f3)" />
                 </svg>
 
+
+
+
                 <div className="relative">
+
+                  
                     <img className="mx-auto h-9 md:h-12 lg:h-16" src="/img/DEInclusive Logo - Final icon.png" alt="Deinclusive" />
                     <blockquote className="mt-10">
                         <div className="mx-auto max-w-3xl text-center text-2xl font-medium leading-9 text-gray-900">
