@@ -7,6 +7,13 @@ const Privacy = () => {
                 <title>Privacy Policy</title>
             </Head>{" "}
             <main className="max-w-7xl px-4 py-4 md:py-7 lg:py-10 mx-auto container">
+                
+                
+                
+                
+                
+                
+                
                 <h1 className="text-4xl lg:text-5xl font-bold py-2">Privacy Policy</h1>
                 <span className="italic font-medium text-gray-600 pt-4">Last updated March 30, 2020 </span>
                 <p className="text-gray-500 font-medium mb-2 pt-3">
@@ -16,6 +23,15 @@ const Privacy = () => {
                     information and your right to privacy. If you have any questions or concerns about our policy or our practices with regard to your personal information, please
                     contact us at community@deinclusive.com.
                 </p>{" "}
+              
+              
+              
+              
+              
+              
+              
+              
+              
                 <p className="text-gray-500 font-medium mb-2">
                     When you visit our website{" "}
                     <a href="https://deinclusive.com" target="_blank" rel="noreferrer" className="text-blue-500 underline italic">
@@ -39,6 +55,14 @@ const Privacy = () => {
                 </p>{" "}
                 <ul>
                     <li>
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
                         <h2 className="text-gray-700 text-xl lg:text-2xl font-bold my-3 pb-2">1. WHAT INFORMATION DO WE COLLECT? </h2>
                         <h3 className="text-gray-600 text-lg lg:text-xl font-semibold pb-1 my-2">The personal information you disclose to us</h3>
                         <p className="text-gray-500 font-medium mb-2">
