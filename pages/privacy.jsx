@@ -73,6 +73,9 @@ const Privacy = () => {
                             information about us or our products and services, when participating in activities on the Services or Apps (such as posting messages on our online
                             forums or entering competitions, contests or giveaways) or otherwise contacting us.
                         </p>
+
+
+                        
                         <p className="text-gray-500 font-medium mb-2">
                             The personal information that we collect depends on the context of your interactions with us and the Services or Apps, the choices you make and the
                             products and features you use. The personal information we collect can include the following:
