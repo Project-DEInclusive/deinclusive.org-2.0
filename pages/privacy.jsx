@@ -75,7 +75,17 @@ const Privacy = () => {
                         </p>
 
 
+
+
+
+
+
+
+
                         
+
+
+
                         <p className="text-gray-500 font-medium mb-2">
                             The personal information that we collect depends on the context of your interactions with us and the Services or Apps, the choices you make and the
                             products and features you use. The personal information we collect can include the following:
