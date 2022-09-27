@@ -116,7 +116,7 @@ const Privacy = () => {
 
 
 
-                        
+
                         <h3 className="text-gray-600 text-lg lg:text-xl font-semibold pb-1 my-2">Information collected through our Apps</h3>
                         <p className="text-gray-500 font-medium mb-2">
                             <span className="font-bold text-gray-600">In Short:</span> We may collect information regarding your geo-location, push notifications, when you use our
@@ -189,6 +189,13 @@ const Privacy = () => {
                             <span className="font-bold text-gray-600">In Short:</span> We only share information with your consent, to comply with laws, to provide you with
                             services, to protect your rights, or to fulfill business obligations.
                         </p>{" "}
+
+
+
+
+
+
+                        
                         <p className="text-gray-500 font-medium mb-2">We may process or share data based on the following legal basis:</p>
                         <p className="text-gray-500 font-medium mb-2">
                             <span className="font-bold">Consent:</span> We may process your data if you have given us specific consent to use your personal information in a
