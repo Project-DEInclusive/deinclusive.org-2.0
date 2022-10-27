@@ -1,6 +1,7 @@
 /*    Imports    */
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import Head from "next/head";
 
 import fetcher from "../../constants/fetch/event";
 
@@ -150,128 +151,134 @@ const Index = () => {
   };
 
   return (
-    <main className="max-w-7xl mx-auto">
-      <div className="md:pt-6 lg:py-12">
-        <h1 className="text-gray-800 font-bold text-3xl text-center mb-4 md:mb-0 ">
-          Event Feed
-        </h1>
-        <div className="mx-auto justify-center px-4 py-t md:pt-6 lg:pt-12 sm:px-6 md:px-8 flex flex-col lg:flex-row gap-x-5">
-          <div className="mt-1 mb-2 flex rounded-md shadow-sm w-full lg:w-5/12">
-            <span className="inline-flex items-center font-semibold px-4 rounded-l-md border border-r-0 border-gray-700 text-gray-700 sm:text-sm">
-              What
-            </span>
-            <input
-              type="text"
-              value={searchText}
-              onChange={searchChange}
-              placeholder="Keyword, event title, or company name"
-              className="block  border-l-0 w-full py-3 shadow-sm  sm:text-sm border-gray-700 rounded-r-md focus:ring-0 focus:border-gray-700"
-            />
-          </div>
-          <div className="mt-1 flex mb-2 rounded-md shadow-sm w-full lg:w-5/12">
-            <span className="inline-flex items-center font-semibold px-4 rounded-l-md border border-r-0 border-gray-700 text-gray-700 sm:text-sm">
-              Time
-            </span>
-            <select
-              value={(searchObj && searchObj.type) || router.query.type || 0}
-              onChange={typeChange}
-              className="block border-l-0 w-full py-3 shadow-sm  sm:text-sm border-gray-700 rounded-r-md focus:ring-0 focus:border-gray-700"
-            >
-              <option selected disabled value={""}>
-                Select Time
-              </option>
-              {types.map((v) => (
-                <option key={v.value} value={v.value}>
-                  {v.name}
-                </option>
-              ))}
-            </select>
-          </div>
-          <div className="mt-1 mb-2 flex rounded-md shadow-sm w-full lg:w-auto">
-            <button
-              disabled={loading}
-              onClick={applyFilter}
-              className="flex items-center w-full justify-center px-4 py-2 border border-transparent text-base  font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150"
-            >
-              Find Events
-            </button>
-          </div>
-        </div>
-        <div className="flex flex-row align-middle justify-center mb-8 mt-3 px-3 text-center">
-          <p className="text-gray-700 mt-3 text-base font-semibold">
-            <span className="text-indigo-600 font-bold hover:text-indigo-500 hover:underline">
-              Submit Your Resume
-            </span>{" "}
-            and Find Perfectly Matching Event to You!
-            <br></br>
-            <span className="font-bold underline">or</span> Use Bellow Advanced{" "}
-            <span className="text-indigo-600 font-bold hover:text-indigo-500 hover:underline">
-              Filter
-            </span>{" "}
-            to Find a Better Event.
-          </p>
-        </div>
-        <div className="mx-auto border-b border-gray-200 pb-8 px-4  sm:px-6 md:px-8 flex justify-center flex-row flex-wrap gap-x-5 gap-y-3 justify-items-stretch">
-          {searchObj && Object.keys(searchObj).length > 0 && (
-            <>
-              <button
-                onClick={clearFilter}
-                className="flex items-center justify-center w-full md:w-auto px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-100 border-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150"
+    <>
+      <Head>
+        <title>Events - DEInclusive</title>
+      </Head>
+      <main className="max-w-7xl mx-auto">
+        <div className="md:pt-6 lg:py-12">
+          <h1 className="text-gray-800 font-bold text-3xl text-center mb-4 md:mb-0 ">
+            Event Feed
+          </h1>
+          <div className="mx-auto justify-center px-4 py-t md:pt-6 lg:pt-12 sm:px-6 md:px-8 flex flex-col lg:flex-row gap-x-5">
+            <div className="mt-1 mb-2 flex rounded-md shadow-sm w-full lg:w-5/12">
+              <span className="inline-flex items-center font-semibold px-4 rounded-l-md border border-r-0 border-gray-700 text-gray-700 sm:text-sm">
+                What
+              </span>
+              <input
+                type="text"
+                value={searchText}
+                onChange={searchChange}
+                placeholder="Keyword, event title, or company name"
+                className="block  border-l-0 w-full py-3 shadow-sm  sm:text-sm border-gray-700 rounded-r-md focus:ring-0 focus:border-gray-700"
+              />
+            </div>
+            <div className="mt-1 flex mb-2 rounded-md shadow-sm w-full lg:w-5/12">
+              <span className="inline-flex items-center font-semibold px-4 rounded-l-md border border-r-0 border-gray-700 text-gray-700 sm:text-sm">
+                Time
+              </span>
+              <select
+                value={(searchObj && searchObj.type) || router.query.type || 0}
+                onChange={typeChange}
+                className="block border-l-0 w-full py-3 shadow-sm  sm:text-sm border-gray-700 rounded-r-md focus:ring-0 focus:border-gray-700"
               >
-                Reset Filter
-              </button>
-            </>
-          )}
-        </div>
-      </div>
-      <div className="mx-auto px-4 sm:px-6">
-        <div className="mt-10 lg:mt-0">
-          <h2 className="text-gray-800 font-semibold text-xl">
-            {
-              types.filter(
-                (v) =>
-                  v.value ==
-                  ((searchObj && searchObj.type) || router.query.type || 0)
-              )[0].name
-            }{" "}
-            Events (Found {total} events)
-          </h2>
-
-          <div className="mt-4 flex flex-row ">
-            <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 flex-wrap ">
-              {events &&
-                events.length > 0 &&
-                events?.map((event, index) => (
-                  <SingleEventCard
-                    key={index}
-                    event={event}
-                    onClick={() => router.push(`/events/${event._id}`)}
-                  ></SingleEventCard>
+                <option selected disabled value={""}>
+                  Select Time
+                </option>
+                {types.map((v) => (
+                  <option key={v.value} value={v.value}>
+                    {v.name}
+                  </option>
                 ))}
-
-              {(!events || filterChange || events.length == 0) &&
-                loading &&
-                Array(10)
-                  .fill(1)
-                  .map((_, index) => (
-                    <SingleEventCardLoading
-                      key={index}
-                    ></SingleEventCardLoading>
-                  ))}
-              {events && total > events.length && (
+              </select>
+            </div>
+            <div className="mt-1 mb-2 flex rounded-md shadow-sm w-full lg:w-auto">
+              <button
+                disabled={loading}
+                onClick={applyFilter}
+                className="flex items-center w-full justify-center px-4 py-2 border border-transparent text-base  font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150"
+              >
+                Find Events
+              </button>
+            </div>
+          </div>
+          <div className="flex flex-row align-middle justify-center mb-8 mt-3 px-3 text-center">
+            <p className="text-gray-700 mt-3 text-base font-semibold">
+              <span className="text-indigo-600 font-bold hover:text-indigo-500 hover:underline">
+                Submit Your Resume
+              </span>{" "}
+              and Find Perfectly Matching Event to You!
+              <br></br>
+              <span className="font-bold underline">or</span> Use Bellow
+              Advanced{" "}
+              <span className="text-indigo-600 font-bold hover:text-indigo-500 hover:underline">
+                Filter
+              </span>{" "}
+              to Find a Better Event.
+            </p>
+          </div>
+          <div className="mx-auto border-b border-gray-200 pb-8 px-4  sm:px-6 md:px-8 flex justify-center flex-row flex-wrap gap-x-5 gap-y-3 justify-items-stretch">
+            {searchObj && Object.keys(searchObj).length > 0 && (
+              <>
                 <button
-                  disabled={loading}
-                  onClick={loadMore}
-                  className="w-full bg-indigo-600 border border-transparent rounded-md shadow-sm py-3 px-4 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500"
+                  onClick={clearFilter}
+                  className="flex items-center justify-center w-full md:w-auto px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-100 border-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150"
                 >
-                  {loading ? "Loading..." : "Load More"}
+                  Reset Filter
                 </button>
-              )}
+              </>
+            )}
+          </div>
+        </div>
+        <div className="mx-auto px-4 sm:px-6">
+          <div className="mt-10 lg:mt-0">
+            <h2 className="text-gray-800 font-semibold text-xl">
+              {
+                types.filter(
+                  (v) =>
+                    v.value ==
+                    ((searchObj && searchObj.type) || router.query.type || 0)
+                )[0].name
+              }{" "}
+              Events (Found {total} events)
+            </h2>
+
+            <div className="mt-4 flex flex-row ">
+              <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 flex-wrap ">
+                {events &&
+                  events.length > 0 &&
+                  events?.map((event, index) => (
+                    <SingleEventCard
+                      key={index}
+                      event={event}
+                      onClick={() => router.push(`/events/${event._id}`)}
+                    ></SingleEventCard>
+                  ))}
+
+                {(!events || filterChange || events.length == 0) &&
+                  loading &&
+                  Array(10)
+                    .fill(1)
+                    .map((_, index) => (
+                      <SingleEventCardLoading
+                        key={index}
+                      ></SingleEventCardLoading>
+                    ))}
+                {events && total > events.length && (
+                  <button
+                    disabled={loading}
+                    onClick={loadMore}
+                    className="w-full bg-indigo-600 border border-transparent rounded-md shadow-sm py-3 px-4 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500"
+                  >
+                    {loading ? "Loading..." : "Load More"}
+                  </button>
+                )}
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </main>
+      </main>
+    </>
   );
 };
 
