@@ -43,7 +43,7 @@ const Contact = () => {
     return (
         <>
             <Head>
-                <title>Contact Us</title>
+                <title>Contact Us - DEInclusive</title>
             </Head>
             <div className="w-full bg-blend-darken bg-gray-400 relative">
                 <img src="/img/diversity.webp" className="h-[200px] w-full object-cover" alt="" />
