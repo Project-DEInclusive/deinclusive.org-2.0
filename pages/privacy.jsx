@@ -7,6 +7,13 @@ const Privacy = () => {
                 <title>Privacy Policy</title>
             </Head>{" "}
             <main className="max-w-7xl px-4 py-4 md:py-7 lg:py-10 mx-auto container">
+                
+                
+                
+                
+                
+                
+                
                 <h1 className="text-4xl lg:text-5xl font-bold py-2">Privacy Policy</h1>
                 <span className="italic font-medium text-gray-600 pt-4">Last updated March 30, 2020 </span>
                 <p className="text-gray-500 font-medium mb-2 pt-3">
@@ -16,6 +23,15 @@ const Privacy = () => {
                     information and your right to privacy. If you have any questions or concerns about our policy or our practices with regard to your personal information, please
                     contact us at community@deinclusive.com.
                 </p>{" "}
+              
+              
+              
+              
+              
+              
+              
+              
+              
                 <p className="text-gray-500 font-medium mb-2">
                     When you visit our website{" "}
                     <a href="https://deinclusive.com" target="_blank" rel="noreferrer" className="text-blue-500 underline italic">
@@ -39,6 +55,14 @@ const Privacy = () => {
                 </p>{" "}
                 <ul>
                     <li>
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
                         <h2 className="text-gray-700 text-xl lg:text-2xl font-bold my-3 pb-2">1. WHAT INFORMATION DO WE COLLECT? </h2>
                         <h3 className="text-gray-600 text-lg lg:text-xl font-semibold pb-1 my-2">The personal information you disclose to us</h3>
                         <p className="text-gray-500 font-medium mb-2">
@@ -49,18 +73,50 @@ const Privacy = () => {
                             information about us or our products and services, when participating in activities on the Services or Apps (such as posting messages on our online
                             forums or entering competitions, contests or giveaways) or otherwise contacting us.
                         </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
                         <p className="text-gray-500 font-medium mb-2">
                             The personal information that we collect depends on the context of your interactions with us and the Services or Apps, the choices you make and the
                             products and features you use. The personal information we collect can include the following:
                         </p>
+
+
+
+
+
+
+
+
                         <p className="text-gray-500 font-medium mb-2">
                             Payment Data. We collect data necessary to process your payment if you make purchases, such as your payment instrument number (such as a credit card
                             number), and the security code associated with your payment instrument. All payment data is stored by Stripe. You may find their privacy policy link
                             here.
                         </p>
+
+
+
+
+
+
                         <p className="text-gray-500 font-medium mb-2">
                             All personal information that you provide to us must be true, complete and accurate, and you must notify us of any changes to such personal information.
                         </p>
+
+
+
+
+
                         <h3 className="text-gray-600 text-lg lg:text-xl font-semibold pb-1 my-2">Information collected through our Apps</h3>
                         <p className="text-gray-500 font-medium mb-2">
                             <span className="font-bold text-gray-600">In Short:</span> We may collect information regarding your geo-location, push notifications, when you use our
@@ -133,6 +189,13 @@ const Privacy = () => {
                             <span className="font-bold text-gray-600">In Short:</span> We only share information with your consent, to comply with laws, to provide you with
                             services, to protect your rights, or to fulfill business obligations.
                         </p>{" "}
+
+
+
+
+
+
+                        
                         <p className="text-gray-500 font-medium mb-2">We may process or share data based on the following legal basis:</p>
                         <p className="text-gray-500 font-medium mb-2">
                             <span className="font-bold">Consent:</span> We may process your data if you have given us specific consent to use your personal information in a

@@ -207,7 +207,7 @@ const Contact = () => {
 
 
 
-                                
+
                                 <div>
                                     <label htmlFor="title" className="sr-only">
                                         Title
@@ -225,6 +225,12 @@ const Contact = () => {
                                     />
                                 </div>
                                 <div>
+
+
+
+
+
+                                    
                                     <label htmlFor="message" className="sr-only">
                                         Message
                                     </label>
